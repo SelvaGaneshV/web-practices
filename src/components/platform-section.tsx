@@ -6,7 +6,7 @@ export const PlatformSection = () => {
   const { heading, description, image, imageAlt } = platformSectionData;
 
   return (
-    <section className="overflow-x-hidden bg-bg-primary pt-12 pb-10 text-primary content-auto md:py-16">
+    <section className="overflow-x-hidden  pt-12 pb-10  content-auto md:py-16">
       <SectionContainer className="relative flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:gap-22">
         {/* text content */}
         <div className="flex-1">

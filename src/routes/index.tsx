@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BuildSection } from "~/components/build-section";
+import { ChatIntergrationSection } from "~/components/chat-intergration-section";
 import { CoreFeatures } from "~/components/core-features";
 import { CtaSection } from "~/components/cta-section";
 import { CoustomerBand } from "~/components/customer-band";
@@ -16,6 +18,8 @@ function RouteComponent() {
       <CoustomerBand />
       <PlatformSection />
       <CoreFeatures />
+      <BuildSection />
+      <ChatIntergrationSection />
       <CtaSection />
     </>
   );

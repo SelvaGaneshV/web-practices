@@ -9,7 +9,16 @@ import feature03 from "~/assets/feature-03.png?url";
 import feature04 from "~/assets/feature-04.png?url";
 import section3 from "~/assets/section-3.png?url";
 import Banner from "~/assets/Banner images.png?url";
+import { Stars03 } from "~/assets/star-03";
+import { Stars02 } from "~/assets/stars-02";
+import { Stars05 } from "~/assets/star-05";
+import { Atom } from "~/assets/atom";
+import { Setting } from "~/assets/setting";
+import byob from "~/assets/Ai - BYOB.png?url";
+import ai from "~/assets/AI - Build Inside CometChat.png?url";
 import {
+  type BuildCardData,
+  type ChatIntegrationCardData,
   type Column,
   type FeatureBlockData,
   type HeroData,
@@ -31,7 +40,7 @@ export const heroData: HeroData = {
     "Full stack. Modular. Production-ready.",
   ],
   ctas: [
-    { label: "Schedule a Demo", href: "/register", variant: "secondary" },
+    { label: "Schedule a Demo", href: "#", variant: "secondary" },
     { label: "Try the Agent Builder", href: "#", variant: "primary" },
   ],
   image: Banner,
@@ -126,6 +135,76 @@ export const featureBlocks: FeatureBlockData[] = [
     footnote: "You can't improve what you can't see. With us, you never ship blind.",
     image: feature03,
     imageAlt: "Insights dashboard",
+  },
+];
+
+export const buildSectionData = {
+  heading: "Plug In your logic. \nOr build it here.",
+  subheading: "Two paths. Same full-stack experience.",
+  image: "tech",
+};
+
+export const buildCards: BuildCardData[] = [
+  {
+    icon: Stars03,
+    title: "BYOB - Bring Your Own (Agent) Brain",
+    bullets: [
+      "Use your existing LLM orchestration",
+      "Plug into CometChat's UI, mod, notifications, and insights",
+      "Modular, protocol-compatible, and fast to implement",
+    ],
+    image: byob,
+    imageAlt: "BYOB - Bring Your Own Brain",
+  },
+  {
+    icon: Stars02,
+    title: "Build Inside CometChat",
+    bullets: [
+      "Visual Agent Builder",
+      "Design prompt logic, memory, retries, tool use",
+      "Simulate and ship - all from a single canvas",
+    ],
+    image: ai,
+    imageAlt: "Build Inside CometChat",
+  },
+];
+
+export const chatIntegrationCards: ChatIntegrationCardData[] = [
+  {
+    icon: Setting,
+    title: "Chat Builder",
+    description: "The fastest way to go live.",
+    bullets: [
+      "Visual interface for styling and configuring chat",
+      "Drop into any web or mobile app with a single snippet",
+      "Integrates with auth, analytics, and third-party tools",
+      "Great for prototypes, pilots, or teams with limited frontend resources",
+    ],
+    linkText: "Try Builder",
+  },
+  {
+    icon: Stars05,
+    title: "UI Kits",
+    description: "Production-ready components with full flexibility.",
+    bullets: [
+      "Available for all popular frameworks",
+      "Theming, layout, and logic hooks exposed",
+      "Save time on structure, focus on experience",
+      "Ideal for teams who want speed and polish",
+    ],
+    linkText: "Try Builder",
+  },
+  {
+    icon: Atom,
+    title: "SDKs & APIs",
+    description: "The toolbox for when you want total control.",
+    bullets: [
+      "Available for all popular frameworks",
+      "Theming, layout, and logic hooks exposed",
+      "Save time on structure, focus on experience",
+      "Ideal for teams who want speed and polish",
+    ],
+    linkText: "Try Builder",
   },
 ];
 

@@ -16,7 +16,7 @@ const BulletItem = ({ text }: { text: string }) => (
 
 export const CoreFeatures = () => {
   return (
-    <section className="content-auto bg-bg-primary text-primary">
+    <section className="content-auto pb-40">
       <div className="container mx-auto flex flex-col items-start gap-8 px-5 md:px-8 lg:flex-row lg:items-center lg:gap-22 lg:px-10 xl:px-20">
         <div className="relative lg:pl-10">
           {/* Header */}

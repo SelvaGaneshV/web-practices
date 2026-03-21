@@ -13,16 +13,16 @@ const Navbar = () => {
             <a
               key={route}
               className="text-[14px] leading-[140%] font-semibold tracking-[0.02em] hover:text-accent-primary"
-              href={`/${route.toLowerCase()}`}
+              href={`#`}
             >
               {route}
             </a>
           ))}
         </div>
         <div className="flex items-center gap-4">
-          <a href="/login">Login</a>
+          <a href="#">Login</a>
           <a
-            href="/register"
+            href="#"
             className={cn(
               buttonVariants({ variant: "primary", size: "lg" }),
               "px-3 py-2 text-sm font-semibold text-secondary",

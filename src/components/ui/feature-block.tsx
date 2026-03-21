@@ -3,7 +3,7 @@ import { type FC } from "react";
 import { type FeatureBlockData } from "~/utils/types";
 import { HighlightText } from "./highlight-text";
 
-const BulletItem = ({ text }: { text: string }) => (
+export const BulletItem = ({ text }: { text: string }) => (
   <li className="font-medium">
     <div className="flex items-start gap-2">
       <Stars04 />

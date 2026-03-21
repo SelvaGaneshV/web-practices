@@ -8,7 +8,11 @@ import { defineConfig } from "vite";
 const config = defineConfig({
   plugins: [
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+      },
+    }),
     nitro(),
     viteReact(),
     babel({

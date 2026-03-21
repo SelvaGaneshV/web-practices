@@ -1,4 +1,5 @@
 import { type LucideIcon } from "lucide-react";
+import { type FC } from "react";
 
 export type Link = { label: string; href: string };
 export type Section = { heading?: string; links: Link[] };
@@ -38,4 +39,21 @@ export type HeroData = {
   ctas: HeroCta[];
   image: string;
   imageAlt: string;
+};
+
+export type BuildCardData = {
+  icon: FC;
+  title: string;
+  bullets: string[];
+  image: string;
+  imageAlt: string;
+};
+
+export type ChatIntegrationCardData = {
+  icon: FC;
+  title: string;
+  description: string;
+  bullets: string[];
+  linkText: string;
+  href?: string;
 };

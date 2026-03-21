@@ -1,7 +1,7 @@
 import { cn } from "~/utils/utils";
 import { type FC, type ReactNode } from "react";
 
-const gradientLine =
+export const gradientLine =
   "linear-gradient(90deg, rgba(250,250,255,0) 0%, rgba(250,250,255,1) 5%, rgba(250,250,255,1) 95%, rgba(250,250,255,0) 100%)";
 
 const CornerCircle = ({
@@ -26,6 +26,7 @@ type BorderedCardProps = {
   leftSpacerWidth?: string;
   rightSpacerWidth?: string;
   lineWidth?: string;
+  showCircles?: boolean;
 };
 
 export const BorderedCard: FC<BorderedCardProps> = ({
@@ -34,6 +35,7 @@ export const BorderedCard: FC<BorderedCardProps> = ({
   leftSpacerWidth = "w-25",
   rightSpacerWidth = "w-30",
   lineWidth = "w-0 lg:w-328",
+  showCircles = true,
 }) => (
   <div className={cn("relative z-40 flex h-full items-center justify-center", className)}>
     <div
@@ -46,15 +48,15 @@ export const BorderedCard: FC<BorderedCardProps> = ({
     />
 
     <div className={cn("relative top-0 h-full", leftSpacerWidth)}>
-      <CornerCircle position="top-left" />
-      <CornerCircle position="bottom-left" />
+      {showCircles && <CornerCircle position="top-left" />}
+      {showCircles && <CornerCircle position="bottom-left" />}
     </div>
 
-    <div className="group relative flex h-full w-full items-center border border-t-0 border-b-0 border-white/10 bg-[#0A0914]">
+    <div className="relative flex h-full w-full items-center border border-t-0 border-b-0 border-white/10 bg-[#0A0914]">
       {children}
 
-      <CornerCircle position="top-right" />
-      <CornerCircle position="bottom-right" />
+      {showCircles && <CornerCircle position="top-right" />}
+      {showCircles && <CornerCircle position="bottom-right" />}
     </div>
 
     <div className={cn("h-full", rightSpacerWidth)} />
