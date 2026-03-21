@@ -14,10 +14,22 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "CometChat - Full Stack AI Agent Platform",
+      },
+      {
+        name: "description",
+        content:
+          "CometChat gives you the entire frontend and infrastructure layer for AI agents. Full stack, modular, and production-ready.",
       },
     ],
     links: [
+      {
+        rel: "preload",
+        href: "/fonts/Satoshi-Variable.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -34,11 +46,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-satoshi">
-        <div className="contents">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
         <Scripts />
       </body>
     </html>

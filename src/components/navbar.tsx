@@ -1,5 +1,6 @@
 import { routes } from "~/utils/constants";
-import { Button } from "./ui/button";
+import { buttonVariants } from "./ui/button";
+import { cn } from "~/utils/utils";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
 
 const Navbar = () => {
@@ -20,13 +21,15 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-4">
           <a href="/login">Login</a>
-          <Button
-            variant="primary"
-            size="lg"
-            className="px-3 py-2 text-sm font-semibold text-secondary"
+          <a
+            href="/register"
+            className={cn(
+              buttonVariants({ variant: "primary", size: "lg" }),
+              "px-3 py-2 text-sm font-semibold text-secondary",
+            )}
           >
-            <a href="/register">Schedule a demo </a>
-          </Button>
+            Schedule a demo
+          </a>
         </div>
       </nav>
     </header>

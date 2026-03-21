@@ -32,9 +32,14 @@
 
 @keyframes marquee {
   from {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
+}
+
+@utility content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }

@@ -1,7 +1,6 @@
 import { Stars04 } from "~/assets/star-04";
 import feature01 from "~/assets/feature-01.png?url";
 import { GradientDivider } from "./ui/gradient-divider";
-import { GradientText } from "./ui/gradient-text";
 import { FeatureBlock } from "./ui/feature-block";
 import { introductionBullets, featureBlocks } from "~/utils/constants";
 import { HighlightText } from "./ui/highlight-text";
@@ -17,7 +16,7 @@ const BulletItem = ({ text }: { text: string }) => (
 
 export const CoreFeatures = () => {
   return (
-    <section className="bg-bg-primary text-primary">
+    <section className="content-auto bg-bg-primary text-primary">
       <div className="container mx-auto flex flex-col items-start gap-8 px-5 md:px-8 lg:flex-row lg:items-center lg:gap-22 lg:px-10 xl:px-20">
         <div className="relative lg:pl-10">
           {/* Header */}
@@ -41,6 +40,10 @@ export const CoreFeatures = () => {
                 <img
                   src={feature01}
                   alt="Everything you'd end up already done."
+                  width={640}
+                  height={640}
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-square h-auto w-full object-contain lg:h-160 lg:w-160"
                 />
               </div>

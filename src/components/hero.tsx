@@ -59,7 +59,14 @@ export const Hero = () => {
             </div>
           </div>
 
-          <img src={image} alt={imageAlt} className="w-full max-w-xl object-contain" />
+          <img
+            src={image}
+            alt={imageAlt}
+            width={576}
+            height={576}
+            fetchPriority="high"
+            className="w-full max-w-xl object-contain"
+          />
         </div>
       </SectionContainer>
     </section>

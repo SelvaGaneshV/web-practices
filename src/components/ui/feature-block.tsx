@@ -27,8 +27,7 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
       <div className="flex flex-col text-2xl leading-snug font-semibold tracking-[0.09px] lg:w-129.5">
         {heading.map((line) => (
           <p key={line.text + line.highlight}>
-            {line.text}{" "}
-            <HighlightText>{line.highlight}</HighlightText>
+            {line.text} <HighlightText>{line.highlight}</HighlightText>
           </p>
         ))}
       </div>
@@ -46,6 +45,10 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
       <img
         src={image}
         alt={imageAlt}
+        width={640}
+        height={640}
+        loading="lazy"
+        decoding="async"
         className="aspect-square h-auto w-full object-contain lg:h-160 lg:w-160"
       />
     </div>

@@ -23,10 +23,19 @@ export const CoustomerBand = () => {
 
               <div
                 className="flex w-max items-center gap-8"
-                style={{ animation: "marquee 20s linear infinite" }}
+                style={{ animation: "marquee 20s linear infinite", willChange: "transform" }}
               >
                 {logos.map((logo, i) => (
-                  <img key={i} src={logo} className="h-10 object-contain px-3 grayscale" />
+                  <img
+                    key={i}
+                    src={logo}
+                    alt=""
+                    width={120}
+                    height={40}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-10 object-contain px-3 grayscale"
+                  />
                 ))}
               </div>
             </div>

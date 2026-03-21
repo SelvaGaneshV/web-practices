@@ -5,10 +5,14 @@ import ellipse from "~/assets/eclipse.png?url";
 
 export const CtaSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="content-auto relative overflow-hidden">
       <img
         src={ellipse}
         alt=""
+        width={1000}
+        height={600}
+        loading="lazy"
+        decoding="async"
         className="pointer-events-none absolute top-50 left-1/2 min-w-250 -translate-x-1/2 opacity-80 select-none lg:top-40"
       />
 
