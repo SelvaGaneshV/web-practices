@@ -1,0 +1,41 @@
+import { type LucideIcon } from "lucide-react";
+
+export type Link = { label: string; href: string };
+export type Section = { heading?: string; links: Link[] };
+export type Column = { title: string; minWidth: string; sections: Section[] };
+
+export type FeatureBlockData = {
+  tag: string;
+  heading: HeroHeadline[];
+  description: string;
+  bullets: string[];
+  footnote: string;
+  image: string;
+  imageAlt: string;
+};
+
+export type SocialLink = { label: string; href: string; icon: LucideIcon };
+
+export type HeroHeadline = { text: string; highlight: string };
+
+export type PlatformSectionData = {
+  heading: HeroHeadline[];
+  description: string;
+  image: string;
+  imageAlt: string;
+};
+
+export type HeroCta = {
+  label: string;
+  href: string;
+  variant: "primary" | "secondary";
+};
+
+export type HeroData = {
+  badge: string;
+  headlines: HeroHeadline[];
+  descriptions: string[];
+  ctas: HeroCta[];
+  image: string;
+  imageAlt: string;
+};

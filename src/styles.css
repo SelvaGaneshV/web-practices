@@ -29,3 +29,12 @@
     @apply bg-bg-primary font-satoshi text-primary;
   }
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

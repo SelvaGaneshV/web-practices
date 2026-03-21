@@ -1,7 +1,7 @@
-import { type FC } from "react";
-import { cn } from "~/utils/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import clsx from "clsx";
+import { type ButtonHTMLAttributes, type FC } from "react";
+import { cn } from "~/utils/utils";
 
 export const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus:outline-none relative overflow-hidden",
@@ -33,7 +33,7 @@ export const buttonVariants = cva(
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & ButtonVariants;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & ButtonVariants;
 
 export const Button: FC<ButtonProps> = ({ size, variant, className, ...props }) => {
   return <button {...props} className={cn(buttonVariants({ size, variant, className }))} />;

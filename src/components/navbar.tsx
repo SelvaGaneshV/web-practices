@@ -1,4 +1,4 @@
-import { routes } from "~/utils/constant";
+import { routes } from "~/utils/constants";
 import { Button } from "./ui/button";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
 
