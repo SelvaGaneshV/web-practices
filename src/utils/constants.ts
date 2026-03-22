@@ -1,20 +1,24 @@
-import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import buildInsideCometchat from "~/assets/build-inside-cometchat.png?url";
-import buildByob from "~/assets/build-byob.png?url";
 import { Atom } from "~/assets/atom";
-import heroBanner from "~/assets/hero-banner.png?url";
+import buildByob from "~/assets/build-byob.png?url";
+import buildInsideCometchat from "~/assets/build-inside-cometchat.png?url";
+import { FacebookLogo } from "~/assets/facebook-logo";
 import featureChatUi from "~/assets/feature-chat-ui.png?url";
 import featureInsights from "~/assets/feature-insights.png?url";
 import featureNotifications from "~/assets/feature-notifications.png?url";
+import { GithubLogo } from "~/assets/github-logo";
+import heroBanner from "~/assets/hero-banner.png?url";
+import { InstagramLogo } from "~/assets/instagram-logo";
+import { LinkedInLogo } from "~/assets/linkedIn-logo";
 import logoEndeavor from "~/assets/logo-endeavor.png?url";
 import logoHaleon from "~/assets/logo-haleon.png?url";
 import logoKahoot from "~/assets/logo-kahoot.png?url";
 import logoShaadi from "~/assets/logo-shaadi.png?url";
 import platformSectionImage from "~/assets/platform-section.png?url";
 import { Setting } from "~/assets/setting";
+import { Stars02 } from "~/assets/star-02";
 import { Stars03 } from "~/assets/star-03";
 import { Stars05 } from "~/assets/star-05";
-import { Stars02 } from "~/assets/star-02";
+import { TwitterLogo } from "~/assets/twitter-logo";
 import {
   type BuildCardData,
   type ChatIntegrationCardData,
@@ -54,11 +58,11 @@ export const customerLogos = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: "Facebook", href: "#", icon: Facebook },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "Instagram", href: "#", icon: Instagram },
-  { label: "Twitter", href: "#", icon: Twitter },
-  { label: "GitHub", href: "#", icon: Github },
+  { label: "Facebook", href: "#", icon: FacebookLogo },
+  { label: "LinkedIn", href: "#", icon: LinkedInLogo },
+  { label: "Instagram", href: "#", icon: InstagramLogo },
+  { label: "Twitter", href: "#", icon: TwitterLogo },
+  { label: "GitHub", href: "#", icon: GithubLogo },
 ];
 
 export const platformSectionData: PlatformSectionData = {

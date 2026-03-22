@@ -2,7 +2,7 @@ import { navLinks } from "~/utils/constants";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "~/utils/utils";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
-import { Menu } from "lucide-react";
+import { Menu } from "~/assets/menu";
 
 const Navbar = () => {
   return (
@@ -11,7 +11,7 @@ const Navbar = () => {
         <a href="/" aria-label="CometChat Home">
           <CometChatLogo className="h-3.5 w-22.5 md:h-5 md:w-32.25" />
         </a>
-        <div className="hidden gap-6 md:flex lg:gap-10 xl:gap-12">
+        <div className="hidden gap-6 lg:flex xl:gap-10 2xl:gap-12">
           {navLinks.map((link) => (
             <a
               key={link}
@@ -30,13 +30,18 @@ const Navbar = () => {
             href="#"
             className={cn(
               buttonVariants({ variant: "primary", size: "lg" }),
-              "hidden px-3 py-2 text-sm font-semibold text-secondary md:inline-flex",
+              "hidden px-3 py-2 text-sm font-semibold text-secondary lg:inline-flex",
             )}
           >
             Schedule a demo
           </a>
-          <Button variant={"secondary"} className="static px-3 py-2.5 md:hidden" size={"sm"} aria-label="Open menu">
-            <Menu size={16} />
+          <Button
+            variant={"secondary"}
+            className="static px-3 py-2.5 lg:hidden"
+            size={"sm"}
+            aria-label="Open menu"
+          >
+            <Menu />
           </Button>
         </div>
       </nav>

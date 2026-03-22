@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
 import { CometChatBgLogo } from "~/assets/comet-chat-bg-logo";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
+import { Plus } from "~/assets/plus";
 import { footerColumns, socialLinks } from "~/utils/constants";
 import { type Column, type Section } from "~/utils/types";
 import { cn } from "~/utils/utils";
@@ -49,15 +49,19 @@ const MobileFooterColumn = ({ title, sections }: Column) => {
         aria-label={`Toggle ${title} section`}
       >
         <p className={columnHeadingClass}>{title}</p>
-        <span className="inline-flex transition-transform duration-200" style={{ transform: open ? "rotate(0deg)" : "rotate(-90deg)" }}>
-          {open ? (
-            <Minus size={18} className="text-accent-primary" />
-          ) : (
-            <Plus size={18} className="text-accent-primary" />
-          )}
+        <span
+          className="inline-flex transition-transform duration-200"
+          style={{ transform: open ? "rotate(-45deg)" : "rotate(0deg)" }}
+        >
+          <Plus />
         </span>
       </button>
-      <div className={cn("grid transition-[grid-template-rows] duration-300 ease-out", open ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
+      <div
+        className={cn(
+          "grid transition-[grid-template-rows] duration-300 ease-out",
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+        )}
+      >
         <div className="overflow-hidden">
           <div className={cn("flex flex-col gap-6", open ? "pb-4" : "")}>
             {sections.map((s, i) => (
@@ -88,7 +92,10 @@ const Footer = () => {
           ))}
         </div>
 
-        <CometChatBgLogo id="cometchat-bg-logo" className="h-12 w-full sm:h-15.75 md:h-30 lg:h-45 xl:h-58.5 2xl:h-72" />
+        <CometChatBgLogo
+          id="cometchat-bg-logo"
+          className="h-12 w-full sm:h-15.75 md:h-30 lg:h-45 xl:h-58.5 2xl:h-72"
+        />
         <GradientDivider />
         <div className="flex w-full flex-col items-center justify-between gap-4 px-4 sm:gap-5 sm:px-5 md:flex-row md:px-8 md:py-5">
           <div className="order-2 flex gap-4 text-[12px] text-primary/50 sm:gap-6 sm:text-[13px] md:order-1 md:items-center">
@@ -109,7 +116,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-[13px] transition-colors hover:text-primary/80"
               >
-                <Icon size={15} />
+                <Icon />
                 {label}
               </a>
             ))}

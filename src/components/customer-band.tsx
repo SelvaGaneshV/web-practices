@@ -18,8 +18,8 @@ export const CustomerBand = () => {
       aria-label="Trusted by leading companies"
     >
       <SectionContainer>
-        <div className="h-20 sm:h-24 md:h-34 2xl:h-40">
-          <BorderedCard>
+        <div className="h-20 sm:h-24 md:h-28 2xl:h-30">
+          <BorderedCard lineWidth={"w-[calc(100%+10%)]"}>
             <div className="group relative flex h-full w-full items-center justify-center overflow-hidden px-4 sm:px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-28">
               <div
                 className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 sm:w-32"
@@ -32,7 +32,7 @@ export const CustomerBand = () => {
               />
 
               <div className="absolute z-10 flex h-6 w-full items-center justify-center gap-6 opacity-0 backdrop-blur-xs group-hover:opacity-100 sm:h-8 sm:gap-8 md:h-10 2xl:h-14 2xl:gap-12">
-                <Button variant={"secondary"} className="bg-transparent h-10">
+                <Button variant={"secondary"} className="h-10 bg-transparent">
                   Check out our amazing customer stories
                 </Button>
               </div>

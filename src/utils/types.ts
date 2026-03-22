@@ -1,5 +1,4 @@
-import { type LucideIcon } from "lucide-react";
-import { type FC, type SVGProps } from "react";
+import { type FC, type FunctionComponent, type SVGProps } from "react";
 
 export type Link = { label: string; href: string };
 export type Section = { heading?: string; links: Link[] };
@@ -15,7 +14,7 @@ export type FeatureBlockData = {
   imageAlt: string;
 };
 
-export type SocialLink = { label: string; href: string; icon: LucideIcon };
+export type SocialLink = { label: string; href: string; icon: FunctionComponent };
 
 export type HeroHeadline = { text: string; highlight: string };
 
