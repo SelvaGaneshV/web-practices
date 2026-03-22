@@ -16,7 +16,6 @@ export const Route = createRootRoute({
           "Build production-ready AI agents with CometChat's full-stack platform. Chat UI, notifications, analytics, and moderation — modular, scalable, and ready to ship.",
       },
 
-      // Open Graph — controls how links appear when shared on Facebook, LinkedIn, Discord, etc.
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "CometChat" },
       {
@@ -31,14 +30,14 @@ export const Route = createRootRoute({
       { property: "og:url", content: "https://web-practices.vercel.app" },
       {
         property: "og:image",
-        content:
-          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png/m/1200x630/",
+        content: "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
       },
+      { property: "og:image:type", content: "image/png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "CometChat - Full Stack AI Agent Platform" },
-      { property: "og:locale", content: "en_US" },
 
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@CometChat" },
       {
@@ -52,8 +51,7 @@ export const Route = createRootRoute({
       },
       {
         name: "twitter:image",
-        content:
-          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png/m/1200x630/",
+        content: "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
       },
 
       { name: "theme-color", content: "#0B0A14" },
