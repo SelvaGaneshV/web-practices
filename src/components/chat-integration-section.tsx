@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { BulletItem } from "./ui/feature-block";
 import { BorderedCard } from "./ui/bordered-card";
 import { GridCard } from "./ui/grid-card";
@@ -153,22 +153,20 @@ export const ChatIntegrationSection = () => {
           >
             <div className="grid w-full grid-cols-1 lg:grid-cols-3">
               {chatIntegrationCards.map((card, i) => (
-                <>
+                <Fragment key={card.title}>
                   <GridCard
-                    key={card.title}
                     corners={cornerMap[i] ? [...cornerMap[i]] : undefined}
                     className={`flex flex-col ${borderMap[i]} hidden p-6 lg:flex lg:p-5 xl:p-8`}
                   >
                     <HoverCard {...card} />
                   </GridCard>
                   <GridCard
-                    key={card.title + "-mobile"}
                     corners={cornerMapMobile[i] ? [...cornerMapMobile[i]] : undefined}
                     className={cn(`flex flex-col p-6 md:p-8 lg:hidden`, borderMapMobile[i])}
                   >
                     <StaticCard {...card} />
                   </GridCard>
-                </>
+                </Fragment>
               ))}
             </div>
           </BorderedCard>
