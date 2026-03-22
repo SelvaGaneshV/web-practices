@@ -12,7 +12,7 @@ export const SectionContainer: FC<SectionContainerProps> = ({
   className,
   as: Tag = "div",
 }) => (
-  <Tag className={cn("container mx-auto max-w-360 px-5 md:px-8 lg:px-10 xl:px-20", className)}>
+  <Tag className={cn("container mx-auto max-w-360 px-4 sm:px-5 md:px-8 lg:px-10 xl:px-20 2xl:max-w-480 2xl:px-28", className)}>
     {children}
   </Tag>
 );

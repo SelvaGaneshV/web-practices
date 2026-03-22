@@ -6,10 +6,10 @@ import { Menu } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="flex h-15 justify-between px-4 py-3 md:h-17 md:px-8 md:py-4">
+    <header className="flex h-15 justify-between px-4 py-3 sm:px-6 md:h-17 md:px-8 md:py-4 2xl:px-12">
       <nav className="flex w-full items-center justify-between">
         <CometChatLogo className="h-3.5 w-22.5 md:h-5 md:w-32.25" />
-        <div className="hidden gap-12 md:flex">
+        <div className="hidden gap-6 md:flex lg:gap-10 xl:gap-12">
           {routes.map((route) => (
             <a
               key={route}
@@ -28,7 +28,7 @@ const Navbar = () => {
             href="#"
             className={cn(
               buttonVariants({ variant: "primary", size: "lg" }),
-              "px-3 py-2 text-sm font-semibold text-secondary md:static hidden",
+              "hidden px-3 py-2 text-sm font-semibold text-secondary md:inline-flex",
             )}
           >
             Schedule a demo

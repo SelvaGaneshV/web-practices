@@ -77,26 +77,26 @@ const MobileFooterColumn = ({ title, sections }: Column) => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-8 pt-14 pb-10 md:gap-14">
-      <div className="min-w-35 px-3 md:px-16">
-        <CometChatLogo className="h-4" />
+    <footer className="mx-auto flex max-w-360 flex-col gap-6 pt-10 pb-8 sm:gap-8 sm:pt-14 sm:pb-10 md:gap-14 2xl:max-w-480">
+      <div className="min-w-35 px-4 sm:px-6 md:px-16 2xl:px-28">
+        <CometChatLogo className="h-3.5 sm:h-4" />
       </div>
       <div className="flex flex-col items-center gap-10">
-        <div className="hidden w-full justify-between gap-20 px-16 md:flex">
+        <div className="hidden w-full flex-wrap justify-between gap-x-8 gap-y-10 px-8 lg:flex lg:px-16 xl:flex-nowrap xl:gap-x-16 2xl:px-28">
           {footerColumns.map((col) => (
             <FooterColumn key={col.title} {...col} />
           ))}
         </div>
-        <div className="flex w-full flex-col px-6 md:hidden">
+        <div className="flex w-full flex-col px-4 sm:px-6 lg:hidden">
           {footerColumns.map((col) => (
             <MobileFooterColumn key={col.title} {...col} />
           ))}
         </div>
 
-        <CometChatBgLogo className="h-15.75 w-full md:h-58.5" />
+        <CometChatBgLogo className="h-12 w-full sm:h-15.75 md:h-30 lg:h-45 xl:h-58.5 2xl:h-72" />
         <GradientDivider />
-        <div className="flex w-full flex-col items-center justify-between gap-5 px-5 md:flex-row md:px-8 md:py-5">
-          <div className="order-2 flex md:items-center   gap-6 text-[13px] text-primary/50 md:order-1">
+        <div className="flex w-full flex-col items-center justify-between gap-4 px-4 sm:gap-5 sm:px-5 md:flex-row md:px-8 md:py-5">
+          <div className="order-2 flex gap-4 text-[12px] text-primary/50 sm:gap-6 sm:text-[13px] md:order-1 md:items-center">
             <span>2025 © CometChat</span>
             <a href="#" className="transition-colors hover:text-primary/80">
               Terms of Use
@@ -105,7 +105,7 @@ const Footer = () => {
               Privacy Policy
             </a>
           </div>
-          <div className="order-1 flex flex-wrap items-center gap-5 text-primary/50 md:order-2">
+          <div className="order-1 flex flex-wrap items-center gap-3 text-primary/50 sm:gap-5 md:order-2">
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
