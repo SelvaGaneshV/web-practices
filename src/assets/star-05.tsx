@@ -1,10 +1,9 @@
-import { useId, type FC, type SVGProps } from "react";
+import { type FC, type SVGProps } from "react";
 
-export const Stars05: FC<SVGProps<SVGSVGElement>> = (props) => {
-  const id = useId();
-  const g0 = `stars05-grad0-${id}`;
-  const g1 = `stars05-grad1-${id}`;
-  const g2 = `stars05-grad2-${id}`;
+export const Stars05: FC<SVGProps<SVGSVGElement>> = ({ id, ...props }) => {
+  const g0 = `${id}-grad0`;
+  const g1 = `${id}-grad1`;
+  const g2 = `${id}-grad2`;
   return (
     <svg
       width={64}

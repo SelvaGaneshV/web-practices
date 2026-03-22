@@ -88,7 +88,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <CometChatBgLogo className="h-12 w-full sm:h-15.75 md:h-30 lg:h-45 xl:h-58.5 2xl:h-72" />
+        <CometChatBgLogo id="cometchat-bg-logo" className="h-12 w-full sm:h-15.75 md:h-30 lg:h-45 xl:h-58.5 2xl:h-72" />
         <GradientDivider />
         <div className="flex w-full flex-col items-center justify-between gap-4 px-4 sm:gap-5 sm:px-5 md:flex-row md:px-8 md:py-5">
           <div className="order-2 flex gap-4 text-[12px] text-primary/50 sm:gap-6 sm:text-[13px] md:order-1 md:items-center">

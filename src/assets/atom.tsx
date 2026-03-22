@@ -1,9 +1,8 @@
-import { useId, type FC, type SVGProps } from "react";
+import { type FC, type SVGProps } from "react";
 
-export const Atom: FC<SVGProps<SVGSVGElement>> = (props) => {
-  const id = useId();
-  const g0 = `atom-grad0-${id}`;
-  const g1 = `atom-grad1-${id}`;
+export const Atom: FC<SVGProps<SVGSVGElement>> = ({ id, ...props }) => {
+  const g0 = `${id}-grad0`;
+  const g1 = `${id}-grad1`;
   return (
     <svg
       width={64}

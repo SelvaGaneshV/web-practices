@@ -1,8 +1,7 @@
-import { useId, type FC, type SVGProps } from "react";
+import { type FC, type SVGProps } from "react";
 
-export const CometChatBgLogo: FC<SVGProps<SVGSVGElement>> = (props) => {
-  const id = useId();
-  const gradientId = `CometChatBgLogo-grad-${id}`;
+export const CometChatBgLogo: FC<SVGProps<SVGSVGElement>> = ({ id, ...props }) => {
+  const gradientId = `${id}-grad`;
   return (
     <svg
       width={1314}

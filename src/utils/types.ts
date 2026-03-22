@@ -1,5 +1,5 @@
 import { type LucideIcon } from "lucide-react";
-import { type FC } from "react";
+import { type FC, type SVGProps } from "react";
 
 export type Link = { label: string; href: string };
 export type Section = { heading?: string; links: Link[] };
@@ -42,7 +42,7 @@ export type HeroData = {
 };
 
 export type BuildCardData = {
-  icon: FC;
+  icon: FC<SVGProps<SVGSVGElement>>;
   title: string;
   bullets: string[];
   image: string;
@@ -50,7 +50,8 @@ export type BuildCardData = {
 };
 
 export type ChatIntegrationCardData = {
-  icon: FC;
+  icon: FC<SVGProps<SVGSVGElement>>;
+  iconId: string;
   title: string;
   description: string;
   bullets: string[];

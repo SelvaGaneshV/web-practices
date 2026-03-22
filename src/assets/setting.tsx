@@ -1,8 +1,5 @@
-import * as React from "react";
-
-export const Setting: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
-  const id = React.useId();
-  const gradientId = `setting-grad-${id}`;
+export const Setting: React.FC<React.SVGProps<SVGSVGElement>> = ({ id, ...props }) => {
+  const gradientId = `${id}-grad`;
   return (
     <svg
       width={64}

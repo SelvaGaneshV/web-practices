@@ -30,6 +30,7 @@ const borderMapMobile = [
 
 const StaticCard = ({
   icon: Icon,
+  iconId,
   title,
   description,
   bullets,
@@ -37,8 +38,10 @@ const StaticCard = ({
   href = "#",
 }: ChatIntegrationCardData) => (
   <div className="flex h-full flex-col gap-4">
-    <Icon />
-    <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
+    <Icon id={iconId + "-m"} />
+    <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">
+      {title}
+    </h3>
     <p className="text-md opacity-75">{description}</p>
     <ul className="flex flex-col items-start gap-3 self-stretch">
       {bullets.map((text) => (
@@ -53,6 +56,7 @@ const StaticCard = ({
 
 const HoverCard = ({
   icon: Icon,
+  iconId,
   title,
   description,
   bullets,
@@ -81,9 +85,11 @@ const HoverCard = ({
           hovered ? "pointer-events-none absolute inset-0 opacity-0" : "opacity-100",
         )}
       >
-        <Icon />
+        <Icon id={iconId} />
         <div className="flex flex-col gap-4">
-          <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
+          <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">
+            {title}
+          </h3>
           <p className="text-md opacity-75">{description}</p>
           <a href={href} className="text-md font-semibold text-accent-primary">
             {linkText}
@@ -96,7 +102,9 @@ const HoverCard = ({
           hovered ? "opacity-100" : "pointer-events-none absolute inset-0 opacity-0",
         )}
       >
-        <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
+        <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">
+          {title}
+        </h3>
         <ul className="flex flex-col items-start gap-3 self-stretch">
           {bullets.map((text, i) => (
             <li

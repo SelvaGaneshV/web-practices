@@ -1,6 +1,7 @@
 import { customerLogos } from "~/utils/constants";
 import { SectionContainer } from "./ui/section-container";
 import { BorderedCard } from "./ui/bordered-card";
+import { Button } from "./ui/button";
 
 export const CustomerBand = () => {
   const logos = [
@@ -19,7 +20,7 @@ export const CustomerBand = () => {
       <SectionContainer>
         <div className="h-20 sm:h-24 md:h-34 2xl:h-40">
           <BorderedCard>
-            <div className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 sm:px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-28">
+            <div className="group relative flex h-full w-full items-center justify-center overflow-hidden px-4 sm:px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-28">
               <div
                 className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 sm:w-32"
                 style={{ background: "linear-gradient(to right, #0a0914, transparent)" }}
@@ -29,6 +30,12 @@ export const CustomerBand = () => {
                 className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 sm:w-32"
                 style={{ background: "linear-gradient(to left, #0a0914, transparent)" }}
               />
+
+              <div className="absolute z-10 flex h-6 w-full items-center justify-center gap-6 opacity-0 backdrop-blur-xs group-hover:opacity-100 sm:h-8 sm:gap-8 md:h-10 2xl:h-14 2xl:gap-12">
+                <Button variant={"secondary"} className="bg-transparent h-10">
+                  Check out our amazing customer stories
+                </Button>
+              </div>
 
               <div
                 className="flex h-6 w-max items-center gap-6 sm:h-8 sm:gap-8 md:h-10 2xl:h-14 2xl:gap-12"

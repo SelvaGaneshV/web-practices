@@ -175,6 +175,7 @@ export const buildCards: BuildCardData[] = [
 export const chatIntegrationCards: ChatIntegrationCardData[] = [
   {
     icon: Setting,
+    iconId: "setting",
     title: "Chat Builder",
     description: "The fastest way to go live.",
     bullets: [
@@ -187,6 +188,7 @@ export const chatIntegrationCards: ChatIntegrationCardData[] = [
   },
   {
     icon: Stars05,
+    iconId: "stars05",
     title: "UI Kits",
     description: "Production-ready components with full flexibility.",
     bullets: [
@@ -199,6 +201,7 @@ export const chatIntegrationCards: ChatIntegrationCardData[] = [
   },
   {
     icon: Atom,
+    iconId: "atom",
     title: "SDKs & APIs",
     description: "The toolbox for when you want total control.",
     bullets: [
