@@ -1,24 +1,24 @@
-import { Atom } from "~/assets/atom";
-import buildByob from "~/assets/build-byob.png?url";
-import buildInsideCometchat from "~/assets/build-inside-cometchat.png?url";
-import { FacebookLogo } from "~/assets/facebook-logo";
-import featureChatUi from "~/assets/feature-chat-ui.png?url";
-import featureInsights from "~/assets/feature-insights.png?url";
-import featureNotifications from "~/assets/feature-notifications.png?url";
-import { GithubLogo } from "~/assets/github-logo";
-import heroBanner from "~/assets/hero-banner.png?url";
-import { InstagramLogo } from "~/assets/instagram-logo";
-import { LinkedInLogo } from "~/assets/linkedIn-logo";
-import logoEndeavor from "~/assets/logo-endeavor.png?url";
-import logoHaleon from "~/assets/logo-haleon.png?url";
-import logoKahoot from "~/assets/logo-kahoot.png?url";
-import logoShaadi from "~/assets/logo-shaadi.png?url";
-import platformSectionImage from "~/assets/platform-section.png?url";
-import { Setting } from "~/assets/setting";
-import { Stars02 } from "~/assets/star-02";
-import { Stars03 } from "~/assets/star-03";
-import { Stars05 } from "~/assets/star-05";
-import { TwitterLogo } from "~/assets/twitter-logo";
+import { Atom } from "~/assets/icons/atom";
+import buildByob from "~/assets/images/build-byob.png?url";
+import buildInsideCometchat from "~/assets/images/build-inside-cometchat.png?url";
+import { FacebookLogo } from "~/assets/logos/facebook-logo";
+import featureChatUi from "~/assets/images/feature-chat-ui.png?url";
+import featureInsights from "~/assets/images/feature-insights.png?url";
+import featureNotifications from "~/assets/images/feature-notifications.png?url";
+import { GithubLogo } from "~/assets/logos/github-logo";
+import heroBanner from "~/assets/images/hero-banner.png?url";
+import { InstagramLogo } from "~/assets/logos/instagram-logo";
+import { LinkedInLogo } from "~/assets/logos/linkedIn-logo";
+import logoEndeavor from "~/assets/logos/logo-endeavor.png?url";
+import logoHaleon from "~/assets/logos/logo-haleon.png?url";
+import logoKahoot from "~/assets/logos/logo-kahoot.png?url";
+import logoShaadi from "~/assets/logos/logo-shaadi.png?url";
+import platformSectionImage from "~/assets/images/platform-section.png?url";
+import { Setting } from "~/assets/icons/setting";
+import { Stars02 } from "~/assets/icons/star-02";
+import { Stars03 } from "~/assets/icons/star-03";
+import { Stars05 } from "~/assets/icons/star-05";
+import { TwitterLogo } from "~/assets/logos/twitter-logo";
 import {
   type BuildCardData,
   type ChatIntegrationCardData,

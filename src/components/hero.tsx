@@ -1,4 +1,4 @@
-import { Stars01 } from "~/assets/star-01";
+import { Stars01 } from "~/assets/icons/star-01";
 import { Button } from "./ui/button";
 import { HighlightText } from "./ui/highlight-text";
 import { SectionContainer } from "./ui/section-container";

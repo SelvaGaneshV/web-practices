@@ -1,8 +1,8 @@
 import { navLinks } from "~/utils/constants";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "~/utils/utils";
-import { CometChatLogo } from "~/assets/comet-chat-logo";
-import { Menu } from "~/assets/menu";
+import { CometChatLogo } from "~/assets/logos/comet-chat-logo";
+import { Menu } from "~/assets/icons/menu";
 
 const Navbar = () => {
   return (

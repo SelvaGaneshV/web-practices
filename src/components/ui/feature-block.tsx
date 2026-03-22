@@ -1,4 +1,4 @@
-import { Stars04 } from "~/assets/star-04";
+import { Stars04 } from "~/assets/icons/star-04";
 import { type CSSProperties, type FC } from "react";
 import { type FeatureBlockData } from "~/utils/types";
 import { HighlightText } from "./highlight-text";

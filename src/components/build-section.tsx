@@ -1,5 +1,5 @@
-import techIntegrations from "~/assets/tech-integrations.png?url";
-import techIntegrationsMobile from "~/assets/tech-integrations-mobile.png?url";
+import techIntegrations from "~/assets/images/tech-integrations.png?url";
+import techIntegrationsMobile from "~/assets/images/tech-integrations-mobile.png?url";
 import { SectionContainer } from "./ui/section-container";
 import { BulletItem } from "./ui/feature-block";
 import { buildCards } from "~/utils/constants";

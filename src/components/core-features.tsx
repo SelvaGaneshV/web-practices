@@ -1,5 +1,5 @@
-import { Stars04 } from "~/assets/star-04";
-import featureCoreIntro from "~/assets/feature-core-intro.png?url";
+import { Stars04 } from "~/assets/icons/star-04";
+import featureCoreIntro from "~/assets/images/feature-core-intro.png?url";
 import { GradientDivider } from "./ui/gradient-divider";
 import { FeatureBlock } from "./ui/feature-block";
 import { SectionContainer } from "./ui/section-container";

@@ -1,6 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
-import heroBanner from "~/assets/hero-banner.png?url";
+import heroBanner from "~/assets/images/hero-banner.png?url";
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
 

@@ -1,5 +1,5 @@
-import { CometChatSquareLogo } from "~/assets/comet-chat-square-logo";
-import ctaGlow from "~/assets/cta-glow.png?url";
+import { CometChatSquareLogo } from "~/assets/logos/comet-chat-square-logo";
+import ctaGlow from "~/assets/images/cta-glow.png?url";
 import { Button } from "./ui/button";
 import { SectionContainer } from "./ui/section-container";
 

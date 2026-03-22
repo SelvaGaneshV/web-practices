@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { CometChatBgLogo } from "~/assets/comet-chat-bg-logo";
-import { CometChatLogo } from "~/assets/comet-chat-logo";
-import { Plus } from "~/assets/plus";
+import { CometChatBgLogo } from "~/assets/logos/comet-chat-bg-logo";
+import { CometChatLogo } from "~/assets/logos/comet-chat-logo";
+import { Plus } from "~/assets/icons/plus";
 import { footerColumns, socialLinks } from "~/utils/constants";
 import { type Column, type Section } from "~/utils/types";
 import { cn } from "~/utils/utils";
