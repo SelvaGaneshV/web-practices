@@ -1,193 +1,105 @@
-Welcome to your new TanStack Start app! 
+# CometChat Marketing Page
 
-# Getting Started
+A responsive marketing landing page for CometChat, built using React and TanStack Start based on the provided Figma design.
 
-To run this application:
+**Live:** [web-practices.vercel.app](https://web-practices.vercel.app)
 
-```bash
-npm install
-npm run dev
-```
+## Tech Stack
 
-# Building For Production
+- React 19 with TanStack Start
+- TypeScript
+- Tailwind CSS 4
+- Vite
 
-To build this application for production:
-
-```bash
-npm run build
-```
-
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+## How to Run
 
 ```bash
-npm run test
+pnpm install
+pnpm run dev
 ```
 
-## Styling
+Runs on `localhost:3000`.
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+### Production Build
 
-### Removing Tailwind CSS
-
-If you prefer not to use Tailwind CSS:
-
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `npm install @tailwindcss/vite tailwindcss -D`
-
-
-
-## Routing
-
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
+```bash
+pnpm run build
+pnpm run start
 ```
 
-Then anywhere in your JSX you can use it like so:
+## Folder Structure
 
-```tsx
-<Link to="/about">About</Link>
+```
+src/
+├── assets/
+│   ├── icons/          # SVG icons as React components
+│   ├── logos/          # Brand logos
+│   └── images/         # Page images
+├── components/
+│   ├── navbar.tsx
+│   ├── hero.tsx
+│   ├── customer-band.tsx
+│   ├── platform-section.tsx
+│   ├── core-features.tsx
+│   ├── build-section.tsx
+│   ├── chat-integration-section.tsx
+│   ├── cta-section.tsx
+│   ├── footer.tsx
+│   └── ui/             # Reusable small components
+│       ├── button.tsx
+│       ├── section-container.tsx
+│       ├── feature-block.tsx
+│       ├── bordered-card.tsx
+│       ├── grid-card.tsx
+│       ├── gradient-text.tsx
+│       ├── gradient-divider.tsx
+│       └── highlight-text.tsx
+├── routes/
+│   ├── __root.tsx      # Root layout with all meta/SEO stuff
+│   └── index.tsx       # Main landing page
+├── utils/
+│   ├── constants.ts    # All the text content and data
+│   ├── types.ts        # TypeScript types
+│   └── utils.ts        # Helper functions
+└── styles.css
 ```
 
-This will create a link that will navigate to the `/about` route.
+I split the page into separate components for each section and kept all the text content in `constants.ts` so it's easy to update without touching component code. Smaller reusable pieces like buttons and cards are in the `ui/` folder.
 
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
+## SEO
 
-### Using A Layout
+- Used semantic HTML tags (`<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`)
+- Added meta title, description, Open Graph tags, and Twitter Card tags
+- Added a canonical URL tag
+- Added JSON-LD structured data for Organization and SoftwareApplication
+- Created `robots.txt` and `sitemap.xml`
+- All images have alt text
 
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
+## Performance
 
-Here is an example layout that includes a header:
+- Images are compressed at build time using vite-plugin-image-optimizer
+- Below-fold images use `loading="lazy"`
+- Hero image is preloaded and has `fetchPriority="high"` since it's the first thing users see
+- Using a single variable font file (Satoshi) that's preloaded to avoid layout shift
+- TanStack Start handles SSR so the page doesn't depend on JS to show content
 
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+## Notes
 
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
+### SEO Assumptions
+- Targeted towards developers looking for chat SDKs and APIs to add to their apps
+- Went with keywords like "in-app chat", "chat API", "messaging SDK"
+- Used SoftwareApplication schema since CometChat is a developer tool/platform
 
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
+### Tradeoffs
+- Went with TanStack Start instead of a plain React SPA so I could get SSR for better SEO
+- All content is hardcoded in a constants file — works fine for a single page but would need a CMS for a bigger site
+- Stuck with PNG images from the Figma exports — ideally would convert to WebP but kept it simple for now
+- Used Tailwind for speed — it made matching the Figma spacing and responsive breakpoints faster
 
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+### What I'd Do Differently in Production
+- Convert images to WebP/AVIF for better file sizes
+- Hook up a CMS so non-devs can update the page content
+- Add analytics and tracking on the CTA buttons
+- Run Lighthouse audits as part of CI/CD
+- Do proper accessibility testing with screen readers
+- Add a 404 page and error handling
