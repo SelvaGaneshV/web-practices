@@ -43,12 +43,12 @@ export const BuildSection = () => {
   return (
     <section className="content-auto">
       <SectionContainer className="flex flex-col items-center justify-center gap-10">
-        <img width={1090} src={tech} className="hidden w-full max-w-full md:block" />
-        <img width={349} src={techm} className="block w-full max-w-87 mx-auto md:hidden" />
+        <img width={1090} src={tech} alt="Technology integrations supported by CometChat" loading="lazy" decoding="async" className="hidden w-full max-w-full md:block" />
+        <img width={349} src={techm} alt="Technology integrations supported by CometChat" loading="lazy" decoding="async" className="block w-full max-w-87 mx-auto md:hidden" />
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-center text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:text-[48px] 2xl:text-[56px]">
+          <h2 className="text-center text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:text-[48px] 2xl:text-[56px]">
             Plug In your logic. <br /> Or build it here.
-          </h1>
+          </h2>
           <p className="text-[16px] leading-[120%] font-medium tracking-[0.5%] opacity-75 sm:text-[18px] md:text-[22px]">
             Two paths. Same full-stack experience.
           </p>

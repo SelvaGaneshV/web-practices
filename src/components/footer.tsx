@@ -110,6 +110,8 @@ const Footer = () => {
               <a
                 key={label}
                 href={href}
+                aria-label={`Follow CometChat on ${label}`}
+                rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-[13px] transition-colors hover:text-primary/80"
               >
                 <Icon size={15} />

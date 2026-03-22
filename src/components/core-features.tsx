@@ -22,13 +22,13 @@ const BulletItem = ({ text }: { text: string }) => (
 export const CoreFeatures = () => {
   return (
     <section className="content-auto">
-      <SectionContainer className="overflow-hidden">
+      <SectionContainer>
         <div className="relative">
           {/* Header */}
           <div className="sticky top-0 z-20 flex flex-col py-4 md:py-6 lg:w-1/2 lg:pt-19">
-            <p className="text-[28px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:pb-2 lg:text-[48px] 2xl:text-[56px]">
+            <h2 className="text-[28px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:pb-2 lg:text-[48px] 2xl:text-[56px]">
               Everything you'd end up <HighlightText>already done.</HighlightText>
-            </p>
+            </h2>
           </div>
 
           <div className="flex flex-col gap-8 sm:gap-10 lg:-mt-50 lg:gap-12.5">

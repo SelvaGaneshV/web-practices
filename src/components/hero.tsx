@@ -27,16 +27,16 @@ export const Hero = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 sm:gap-2 md:gap-2.5">
+                <h1 className="flex flex-col gap-1 sm:gap-2 md:gap-2.5">
                   {headlines.map((line) => (
-                    <p
+                    <span
                       key={line.text}
-                      className="text-[32px] leading-[106%] tracking-[0%] sm:text-[40px] md:text-[48px] lg:text-[58px] 2xl:text-[68px]"
+                      className="block text-[32px] leading-[106%] tracking-[0%] sm:text-[40px] md:text-[48px] lg:text-[58px] 2xl:text-[68px]"
                     >
                       {line.text} <HighlightText className="pb-1">{line.highlight}</HighlightText>
-                    </p>
+                    </span>
                   ))}
-                </div>
+                </h1>
               </div>
               <div className="flex flex-col gap-3 text-[14px] leading-[120%] tracking-[0.5%] opacity-75 sm:text-[16px] md:text-[20px] lg:text-[22px] 2xl:text-[26px]">
                 {descriptions.map((text) => (

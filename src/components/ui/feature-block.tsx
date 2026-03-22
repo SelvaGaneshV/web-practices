@@ -27,16 +27,16 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
 }) => (
   <div className="flex flex-col items-center gap-6 sm:gap-8 lg:flex-row lg:items-center lg:gap-16">
     <div className="flex w-full flex-col items-start gap-4 lg:w-1/2">
-      <h3 className="text-[14px] leading-[106%] font-semibold tracking-[0%] text-accent-primary sm:text-[16px] md:text-[18px] lg:text-[22px]">
+      <span className="text-[14px] leading-[106%] font-semibold tracking-[0%] text-accent-primary sm:text-[16px] md:text-[18px] lg:text-[22px]">
         {tag}
-      </h3>
-      <div className="flex flex-col text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[36px]">
+      </span>
+      <h3 className="flex flex-col text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[36px]">
         {heading.map((line) => (
-          <p key={line.text + line.highlight}>
+          <span key={line.text + line.highlight}>
             {line.text} <HighlightText>{line.highlight}</HighlightText>
-          </p>
+          </span>
         ))}
-      </div>
+      </h3>
       <p className="text-[14px] leading-[120%] font-medium tracking-[0.5%] opacity-75 sm:text-[16px] md:text-[18px]">
         {description}
       </p>

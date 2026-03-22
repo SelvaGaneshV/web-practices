@@ -1,6 +1,7 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "CometChat",
+  "name": "CometChat - Full Stack AI Agent Platform",
+  "description": "Build production-ready AI agents with CometChat's full-stack platform. Chat UI, notifications, analytics, and moderation.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0B0A14",
+  "background_color": "#0B0A14",
+  "orientation": "portrait-primary",
+  "categories": ["developer-tools", "productivity"]
 }

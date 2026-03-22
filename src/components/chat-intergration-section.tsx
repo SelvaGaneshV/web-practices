@@ -136,9 +136,9 @@ export const ChatIntergrationSection = () => {
           <p className="text-[16px] leading-[120%] font-medium tracking-[0.5%] text-accent-primary sm:text-[18px] md:text-[22px]">
             Chat integration options
           </p>
-          <h1 className="text-center text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:text-[48px] 2xl:text-[56px]">
+          <h2 className="text-center text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:text-[48px] 2xl:text-[56px]">
             Your launch, your way. Done right.
-          </h1>
+          </h2>
           <p className="text-center text-[14px] leading-[120%] font-medium tracking-[0.5%] opacity-75 sm:text-[16px] md:text-[18px] lg:text-[22px]">
             Start with what gets you to production fastest – or matches your needs the best. <br />{" "}
             Swap it out or level it up later.

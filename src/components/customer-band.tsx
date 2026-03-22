@@ -3,14 +3,23 @@ import { SectionContainer } from "./ui/section-container";
 import { BorderedCard } from "./ui/bordered-card";
 
 export const CoustomerBand = () => {
-  const logos = [...customerLogo, ...customerLogo, ...customerLogo, ...customerLogo, ...customerLogo];
+  const logos = [
+    ...customerLogo,
+    ...customerLogo,
+    ...customerLogo,
+    ...customerLogo,
+    ...customerLogo,
+  ];
 
   return (
-    <section className="relative isolate z-20 overflow-visible">
+    <section
+      className="relative isolate z-20 overflow-visible"
+      aria-label="Trusted by leading companies"
+    >
       <SectionContainer>
         <div className="h-20 sm:h-24 md:h-34 2xl:h-40">
           <BorderedCard>
-            <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+            <div className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 sm:px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-28">
               <div
                 className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 sm:w-32"
                 style={{ background: "linear-gradient(to right, #0a0914, transparent)" }}
@@ -28,8 +37,8 @@ export const CoustomerBand = () => {
                 {logos.map((logo, i) => (
                   <img
                     key={i}
-                    src={logo}
-                    alt=""
+                    src={logo.src}
+                    alt={`${logo.alt} logo`}
                     width={120}
                     height={40}
                     loading="lazy"

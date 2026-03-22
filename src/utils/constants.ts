@@ -1,21 +1,20 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import ai from "~/assets/AI - Build Inside CometChat.png?url";
+import byob from "~/assets/Ai - BYOB.png?url";
+import { Atom } from "~/assets/atom";
+import Banner from "~/assets/Banner images.png?url";
 import endeavor from "~/assets/endeavor.png?url";
-import haleon from "~/assets/haleon-seeklogo.com.png?url";
-import kahoot from "~/assets/kahoot-seeklogo.com.png?url";
-import trans from "~/assets/nb_logo_new_trans.png?url";
-import shaadi from "~/assets/shaadi-seeklogo.com.png?url";
 import feature02 from "~/assets/feature-02.png?url";
 import feature03 from "~/assets/feature-03.png?url";
 import feature04 from "~/assets/feature-04.png?url";
+import haleon from "~/assets/haleon-seeklogo.com.png?url";
+import kahoot from "~/assets/kahoot-seeklogo.com.png?url";
 import section3 from "~/assets/section-3.png?url";
-import Banner from "~/assets/Banner images.png?url";
-import { Stars03 } from "~/assets/star-03";
-import { Stars02 } from "~/assets/stars-02";
-import { Stars05 } from "~/assets/star-05";
-import { Atom } from "~/assets/atom";
 import { Setting } from "~/assets/setting";
-import byob from "~/assets/Ai - BYOB.png?url";
-import ai from "~/assets/AI - Build Inside CometChat.png?url";
+import shaadi from "~/assets/shaadi-seeklogo.com.png?url";
+import { Stars03 } from "~/assets/star-03";
+import { Stars05 } from "~/assets/star-05";
+import { Stars02 } from "~/assets/stars-02";
 import {
   type BuildCardData,
   type ChatIntegrationCardData,
@@ -47,7 +46,12 @@ export const heroData: HeroData = {
   imageAlt: "CometChat banner",
 };
 
-export const customerLogo = [haleon, kahoot, endeavor, shaadi, trans];
+export const customerLogo = [
+  { src: haleon, alt: "Haleon" },
+  { src: kahoot, alt: "Kahoot!" },
+  { src: endeavor, alt: "Endeavor" },
+  { src: shaadi, alt: "Shaadi.com" },
+];
 
 export const socialLinks: SocialLink[] = [
   { label: "Facebook", href: "#", icon: Facebook },
