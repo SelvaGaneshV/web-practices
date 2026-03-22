@@ -1,10 +1,11 @@
 import { Stars04 } from "~/assets/star-04";
-import { type FC } from "react";
+import { type CSSProperties, type FC } from "react";
 import { type FeatureBlockData } from "~/utils/types";
 import { HighlightText } from "./highlight-text";
+import { cn } from "~/utils/utils";
 
-export const BulletItem = ({ text }: { text: string }) => (
-  <li className="font-medium">
+export const BulletItem = ({ text, className, style }: { text: string; className?: string; style?: CSSProperties }) => (
+  <li className={cn("font-medium", className)} style={style}>
     <div className="flex items-start gap-2">
       <div className="h-5 w-3 md:h-6.5 md:w-4.5">
         <Stars04 className="size-3! md:size-4.5!" />

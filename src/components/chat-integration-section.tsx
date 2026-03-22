@@ -107,17 +107,16 @@ const HoverCard = ({
         </h3>
         <ul className="flex flex-col items-start gap-3 self-stretch">
           {bullets.map((text, i) => (
-            <li
+            <BulletItem
               key={text}
+              text={text}
               className="transition-all duration-200"
               style={{
                 transitionDelay: hovered ? `${i * 30}ms` : "0ms",
                 opacity: hovered ? 1 : 0,
                 transform: hovered ? "translateY(0)" : "translateY(10px)",
               }}
-            >
-              <BulletItem text={text} />
-            </li>
+            />
           ))}
         </ul>
         <a href={href} className="text-md font-semibold text-accent-primary">
