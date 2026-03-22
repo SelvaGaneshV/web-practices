@@ -31,7 +31,8 @@ export const Route = createRootRoute({
       { property: "og:url", content: "https://web-practices.vercel.app" },
       {
         property: "og:image",
-        content: "https://web-practices.vercel.app/og-image.png",
+        content:
+          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png/m/1200x630/",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -51,7 +52,8 @@ export const Route = createRootRoute({
       },
       {
         name: "twitter:image",
-        content: "https://web-practices.vercel.app/og-image.png",
+        content:
+          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png/m/1200x630/",
       },
 
       { name: "theme-color", content: "#0B0A14" },
