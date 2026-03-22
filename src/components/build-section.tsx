@@ -1,15 +1,16 @@
 import tech from "~/assets/tech.png?url";
+import techm from "~/assets/techm.png?url";
 import { SectionContainer } from "./ui/section-container";
 import { BulletItem } from "./ui/feature-block";
 import { buildCards } from "~/utils/constants";
 import { type BuildCardData } from "~/utils/types";
 
 const BuildCard = ({ icon: Icon, title, bullets, image, imageAlt }: BuildCardData) => (
-  <div className="flex gap-8 rounded-3xl border border-primary/10 px-8">
-    <div className="flex flex-col items-center py-8">
-      <div className="flex w-full flex-col items-start gap-4 lg:w-147">
+  <div className="flex gap-8 rounded-2xl border border-primary/10 px-4 md:rounded-3xl md:px-8">
+    <div className="flex flex-col items-center py-4 md:py-8">
+      <div className="flex w-full flex-col items-start gap-4 md:w-147">
         <Icon />
-        <div className="flex flex-col text-2xl leading-snug font-semibold tracking-[0.09px] lg:w-129.5">
+        <div className="flex flex-col text-[22px] leading-[106%] font-semibold tracking-[0%] md:w-129.5">
           <p>{title}</p>
         </div>
 
@@ -31,7 +32,7 @@ const BuildCard = ({ icon: Icon, title, bullets, image, imageAlt }: BuildCardDat
           height={324}
           loading="lazy"
           decoding="async"
-          className="aspect-square h-auto w-full object-contain lg:h-80 lg:w-160"
+          className="aspect-square h-50 w-87 object-contain md:h-80 md:w-160"
         />
       </div>
     </div>
@@ -42,16 +43,17 @@ export const BuildSection = () => {
   return (
     <section className="content-auto">
       <SectionContainer className="flex flex-col items-center justify-center gap-10">
-        <img width={1090} src={tech} />
+        <img width={1090} src={tech} className="hidden md:static" />
+        <img width={349} src={techm} className="static md:hidden" />
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-center text-[48px] leading-[106%] font-semibold tracking-[0%]">
+          <h1 className="text-center text-[32px] leading-[106%] font-semibold tracking-[0%] md:text-[48px]">
             Plug In your logic. <br /> Or build it here.
           </h1>
-          <p className="text-[22px] leading-[120%] font-medium tracking-[0.5%] opacity-75">
+          <p className="text-[18px] leading-[120%] font-medium tracking-[0.5%] opacity-75 md:text-[22px]">
             Two paths. Same full-stack experience.
           </p>
         </div>
-        <div className="flex gap-8">
+        <div className="flex flex-col gap-6 md:flex-row md:gap-8">
           {buildCards.map((card) => (
             <BuildCard key={card.title} {...card} />
           ))}

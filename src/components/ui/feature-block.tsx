@@ -6,8 +6,12 @@ import { HighlightText } from "./highlight-text";
 export const BulletItem = ({ text }: { text: string }) => (
   <li className="font-medium">
     <div className="flex items-start gap-2">
-      <Stars04 />
-      <span className="text-lg leading-snug font-medium tracking-[0.09px] opacity-75">{text}</span>
+      <div className="h-5 w-3 md:h-6.5 md:w-4.5">
+        <Stars04 className="size-3! md:size-4.5!" />
+      </div>
+      <span className="text-[16px] leading-[120%] font-medium tracking-[0.5%] opacity-75 md:text-[18px]">
+        {text}
+      </span>
     </div>
   </li>
 );
@@ -21,17 +25,21 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
   image,
   imageAlt,
 }) => (
-  <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-16">
-    <div className="flex w-full flex-col items-start gap-4 lg:w-147">
-      <h3 className="text-xl leading-tight font-semibold text-accent-primary">{tag}</h3>
-      <div className="flex flex-col text-2xl leading-snug font-semibold tracking-[0.09px] lg:w-129.5">
+  <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-16">
+    <div className="flex w-full flex-col items-start gap-4 md:w-147">
+      <h3 className="text-[16px] leading-[106%] font-semibold tracking-[0%] text-accent-primary md:text-[22px]">
+        {tag}
+      </h3>
+      <div className="flex flex-col text-[32px] leading-[106%] font-semibold tracking-[0%] md:w-129.5">
         {heading.map((line) => (
           <p key={line.text + line.highlight}>
             {line.text} <HighlightText>{line.highlight}</HighlightText>
           </p>
         ))}
       </div>
-      <p className="text-lg leading-snug font-medium tracking-[0.09px] opacity-75">{description}</p>
+      <p className="text-[16px] leading-[120%] font-medium tracking-[0.5%] opacity-75 md:text-[18px]">
+        {description}
+      </p>
 
       <ul className="flex flex-col items-start gap-3 self-stretch">
         {bullets.map((text) => (
@@ -39,9 +47,11 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
         ))}
       </ul>
 
-      <p className="text-md leading-snug font-semibold tracking-widest opacity-75">{footnote}</p>
+      <p className="text-[16px] leading-[120%] font-medium tracking-[0.5%] opacity-75 md:text-[18px]">
+        {footnote}
+      </p>
     </div>
-    <div className="flex w-full items-center justify-center lg:w-1/2">
+    <div className="flex w-full items-center justify-center md:w-1/2">
       <img
         src={image}
         alt={imageAlt}
@@ -49,7 +59,7 @@ export const FeatureBlock: FC<FeatureBlockData> = ({
         height={640}
         loading="lazy"
         decoding="async"
-        className="aspect-square h-auto w-full object-contain lg:h-160 lg:w-160"
+        className="aspect-square h-85 w-85 object-contain md:h-160 md:w-160"
       />
     </div>
   </div>

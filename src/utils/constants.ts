@@ -80,7 +80,6 @@ export const featureBlocks: FeatureBlockData[] = [
         text: "The UX layer your agent deserves. Built for LLM-native interactions, out of the box.",
         highlight: "",
       },
-      { text: "out of the box.", highlight: "" },
     ],
     description:
       "Forget cobbling together buttons and hoping users 'get it'. Our chat layer is purpose-built for how agents think - and how humans expect them to respond.",
