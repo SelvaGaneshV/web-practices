@@ -6,14 +6,11 @@
     "dev": "vite dev --port 3000",
     "build": "vite build",
     "start": "node .output/server/index.mjs",
-    "preview": "vite preview",
-    "test": "vitest run"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
     "@tanstack/react-router": "^1.168.2",
     "@tanstack/react-start": "^1.167.3",
-    "@tanstack/router-plugin": "^1.167.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
@@ -24,15 +21,13 @@
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.2",
-    "@tailwindcss/typography": "^0.5.19",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/react": "^16.3.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "@tanstack/router-plugin": "^1.167.3",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "babel-plugin-react-compiler": "^1.0.0",
-    "jsdom": "^29.0.1",
     "nitro": "3.0.260311-beta",
     "oxfmt": "^0.41.0",
     "oxlint": "^1.56.0",
