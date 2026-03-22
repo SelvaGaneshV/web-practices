@@ -45,6 +45,8 @@ const MobileFooterColumn = ({ title, sections }: Column) => {
       <button
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between py-4"
+        aria-expanded={open}
+        aria-label={`Toggle ${title} section`}
       >
         <p className={columnHeadingClass}>{title}</p>
         <span className="inline-flex transition-transform duration-200" style={{ transform: open ? "rotate(0deg)" : "rotate(-90deg)" }}>

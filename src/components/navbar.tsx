@@ -35,7 +35,7 @@ const Navbar = () => {
           >
             Schedule a demo
           </a>
-          <Button variant={"secondary"} className="static px-3 py-2.5 md:hidden" size={"sm"}>
+          <Button variant={"secondary"} className="static px-3 py-2.5 md:hidden" size={"sm"} aria-label="Open menu">
             <Menu size={16} />
           </Button>
         </div>
