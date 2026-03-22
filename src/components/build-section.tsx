@@ -20,7 +20,7 @@ const BuildCard = ({ icon: Icon, title, bullets, image, imageAlt }: BuildCardDat
           ))}
         </ul>
 
-        <p className="text-md leading-snug font-semibold tracking-widest text-accent-primary opacity-75 hover:text-primary/80">
+        <p className="text-md leading-snug font-semibold tracking-widest text-accent-primary hover:text-primary/80">
           Learn more
         </p>
       </div>
@@ -43,8 +43,22 @@ export const BuildSection = () => {
   return (
     <section className="content-auto">
       <SectionContainer className="flex flex-col items-center justify-center gap-10">
-        <img width={1090} src={tech} alt="Technology integrations supported by CometChat" loading="lazy" decoding="async" className="hidden w-full max-w-full md:block" />
-        <img width={349} src={techm} alt="Technology integrations supported by CometChat" loading="lazy" decoding="async" className="block w-full max-w-87 mx-auto md:hidden" />
+        <img
+          width={1090}
+          src={tech}
+          alt="Technology integrations supported by CometChat"
+          loading="lazy"
+          decoding="async"
+          className="hidden w-full max-w-full md:block"
+        />
+        <img
+          width={349}
+          src={techm}
+          alt="Technology integrations supported by CometChat"
+          loading="lazy"
+          decoding="async"
+          className="mx-auto block w-full max-w-87 md:hidden"
+        />
         <div className="flex flex-col items-center justify-center gap-4">
           <h2 className="text-center text-[26px] leading-[106%] font-semibold tracking-[0%] sm:text-[32px] md:text-[40px] lg:text-[48px] 2xl:text-[56px]">
             Plug In your logic. <br /> Or build it here.

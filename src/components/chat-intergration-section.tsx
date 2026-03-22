@@ -39,7 +39,7 @@ const StaticCard = ({
 }: ChatIntegrationCardData) => (
   <div className="flex h-full flex-col gap-4">
     <Icon />
-    <h4 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h4>
+    <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
     <p className="text-md opacity-75">{description}</p>
     <ul className="flex flex-col items-start gap-3 self-stretch">
       {bullets.map((text) => (
@@ -86,7 +86,7 @@ const HoverCard = ({
           >
             <Icon />
             <div className="flex flex-col gap-4">
-              <h4 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h4>
+              <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
               <p className="text-md opacity-75">{description}</p>
               <a href={href} className="text-md font-semibold text-accent-primary">
                 {linkText}
@@ -102,7 +102,7 @@ const HoverCard = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            <h4 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h4>
+            <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
             <ul className="flex flex-col items-start gap-3 self-stretch">
               {bullets.map((text, i) => (
                 <motion.li
