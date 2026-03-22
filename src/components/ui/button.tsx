@@ -14,7 +14,11 @@ export const buttonVariants = cva(
           "hover:brightness-105 active:scale-[0.98]",
         ),
 
-        secondary: clsx("bg-transparent", "border border-primary/10", "backdrop-blur-md"),
+        secondary: clsx(
+          "bg-white/5",
+          "border border-primary/10",
+          "hover:bg-[radial-gradient(circle_80px_at_30%_0%,rgba(216,210,244,0.4)_1%,rgba(216,210,244,0.1)_50%,transparent_100%)]",
+        ),
       },
 
       size: {

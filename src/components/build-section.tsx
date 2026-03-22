@@ -45,6 +45,7 @@ export const BuildSection = () => {
       <SectionContainer className="flex flex-col items-center justify-center gap-10">
         <img
           width={1090}
+          height={294}
           src={tech}
           alt="Technology integrations supported by CometChat"
           loading="lazy"
@@ -53,6 +54,7 @@ export const BuildSection = () => {
         />
         <img
           width={349}
+          height={167}
           src={techm}
           alt="Technology integrations supported by CometChat"
           loading="lazy"

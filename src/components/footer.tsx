@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
 import { CometChatBgLogo } from "~/assets/comet-chat-bg-logo";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
 import { footerColumns, socialLinks } from "~/utils/constants";
@@ -48,27 +47,21 @@ const MobileFooterColumn = ({ title, sections }: Column) => {
         className="flex w-full items-center justify-between py-4"
       >
         <p className={columnHeadingClass}>{title}</p>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={open ? "minus" : "plus"}
-            initial={{ rotate: -90, opacity: 0 }}
-            animate={{ rotate: 0, opacity: 1 }}
-            exit={{ rotate: 90, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            {open ? (
-              <Minus size={18} className="text-accent-primary" />
-            ) : (
-              <Plus size={18} className="text-accent-primary" />
-            )}
-          </motion.span>
-        </AnimatePresence>
+        <span className="inline-flex transition-transform duration-200" style={{ transform: open ? "rotate(0deg)" : "rotate(-90deg)" }}>
+          {open ? (
+            <Minus size={18} className="text-accent-primary" />
+          ) : (
+            <Plus size={18} className="text-accent-primary" />
+          )}
+        </span>
       </button>
-      <div className={cn("overflow-hidden transition-all", open ? "max-h-125 pb-4" : "max-h-0")}>
-        <div className="flex flex-col gap-6">
-          {sections.map((s, i) => (
-            <FooterSection key={i} {...s} />
-          ))}
+      <div className={cn("grid transition-[grid-template-rows] duration-300 ease-out", open ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
+        <div className="overflow-hidden">
+          <div className={cn("flex flex-col gap-6", open ? "pb-4" : "")}>
+            {sections.map((s, i) => (
+              <FooterSection key={i} {...s} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

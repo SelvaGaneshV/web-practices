@@ -1,5 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
+import Banner from "~/assets/Banner images.png?url";
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
 
@@ -76,6 +77,7 @@ export const Route = createRootRoute({
         type: "font/woff2",
         crossOrigin: "anonymous",
       },
+      { rel: "preload", href: Banner, as: "image" },
       { rel: "stylesheet", href: appCss },
     ],
     scripts: [

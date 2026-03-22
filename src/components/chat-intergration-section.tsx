@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { BulletItem } from "./ui/feature-block";
 import { BorderedCard } from "./ui/bordered-card";
 import { GridCard } from "./ui/grid-card";
@@ -64,7 +63,7 @@ const HoverCard = ({
 
   return (
     <div
-      className="flex h-full flex-col justify-between gap-16 overflow-hidden xl:gap-30"
+      className="relative flex h-full flex-col justify-between gap-16 overflow-hidden xl:gap-30"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -76,54 +75,47 @@ const HoverCard = ({
           opacity: hovered ? 1 : 0,
         }}
       />
-      <AnimatePresence mode="wait">
-        {!hovered ? (
-          <motion.div
-            key="default"
-            className="flex h-full flex-col justify-between gap-20 xl:gap-36"
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.12 }}
-          >
-            <Icon />
-            <div className="flex flex-col gap-4">
-              <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
-              <p className="text-md opacity-75">{description}</p>
-              <a href={href} className="text-md font-semibold text-accent-primary">
-                {linkText}
-              </a>
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div
-            key="expanded"
-            className="flex h-full flex-col justify-end gap-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
-          >
-            <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
-            <ul className="flex flex-col items-start gap-3 self-stretch">
-              {bullets.map((text, i) => (
-                <motion.li
-                  key={text}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.2,
-                    delay: i * 0.03,
-                  }}
-                >
-                  <BulletItem text={text} />
-                </motion.li>
-              ))}
-            </ul>
-            <a href={href} className="text-md font-semibold text-accent-primary">
-              {linkText}
-            </a>
-          </motion.div>
+      <div
+        className={cn(
+          "flex h-full flex-col justify-between gap-20 transition-opacity duration-150 xl:gap-36",
+          hovered ? "pointer-events-none absolute inset-0 opacity-0" : "opacity-100",
         )}
-      </AnimatePresence>
+      >
+        <Icon />
+        <div className="flex flex-col gap-4">
+          <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
+          <p className="text-md opacity-75">{description}</p>
+          <a href={href} className="text-md font-semibold text-accent-primary">
+            {linkText}
+          </a>
+        </div>
+      </div>
+      <div
+        className={cn(
+          "flex h-full flex-col justify-end gap-4 transition-opacity duration-150",
+          hovered ? "opacity-100" : "pointer-events-none absolute inset-0 opacity-0",
+        )}
+      >
+        <h3 className="text-[20px] leading-[106%] font-semibold tracking-[0%] xl:text-[24px]">{title}</h3>
+        <ul className="flex flex-col items-start gap-3 self-stretch">
+          {bullets.map((text, i) => (
+            <li
+              key={text}
+              className="transition-all duration-200"
+              style={{
+                transitionDelay: hovered ? `${i * 30}ms` : "0ms",
+                opacity: hovered ? 1 : 0,
+                transform: hovered ? "translateY(0)" : "translateY(10px)",
+              }}
+            >
+              <BulletItem text={text} />
+            </li>
+          ))}
+        </ul>
+        <a href={href} className="text-md font-semibold text-accent-primary">
+          {linkText}
+        </a>
+      </div>
     </div>
   );
 };

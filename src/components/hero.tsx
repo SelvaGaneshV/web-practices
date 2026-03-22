@@ -16,7 +16,7 @@ export const Hero = () => {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-4">
                 <div className="flex">
-                  <div className="flex size-8 items-center justify-center rounded-full bg-linear-to-b from-white to-accent-secondary backdrop-blur-lg sm:size-9 md:size-10">
+                  <div className="flex size-8 items-center justify-center rounded-full bg-linear-to-b from-white to-accent-secondary sm:size-9 md:size-10">
                     <Stars01 className="size-5 sm:size-5.5 md:size-6" />
                   </div>
                   <div className="flex items-center rounded-full bg-linear-to-b from-white to-accent-primary p-0.5">
