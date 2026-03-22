@@ -4,7 +4,6 @@ import { HighlightText } from "./ui/highlight-text";
 import { SectionContainer } from "./ui/section-container";
 import { heroData } from "~/utils/constants";
 
-
 export const Hero = () => {
   const { badge, headlines, descriptions, ctas, image, imageAlt } = heroData;
 
@@ -49,7 +48,7 @@ export const Hero = () => {
                 <Button
                   key={cta.label}
                   variant={cta.variant}
-                  className="h-10 w-auto px-4 py-2.5 text-sm sm:h-11 sm:px-5 sm:py-3 md:w-43.25"
+                  className="h-10 w-auto px-4 py-2.5 text-[14px] leading-[140%] tracking-[2%] sm:h-11  sm:py-3 md:w-43.25"
                 >
                   {cta.label}
                 </Button>
