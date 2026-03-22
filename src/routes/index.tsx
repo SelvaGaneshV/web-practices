@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   return (
-    <>
+    <main className="flex flex-col gap-22">
       <Hero />
       <CoustomerBand />
       <PlatformSection />
@@ -21,6 +21,6 @@ function RouteComponent() {
       <BuildSection />
       <ChatIntergrationSection />
       <CtaSection />
-    </>
+    </main>
   );
 }

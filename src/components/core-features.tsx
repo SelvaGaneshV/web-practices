@@ -16,12 +16,12 @@ const BulletItem = ({ text }: { text: string }) => (
 
 export const CoreFeatures = () => {
   return (
-    <section className="content-auto pb-40">
+    <section className="content-auto">
       <div className="container mx-auto flex flex-col items-start gap-8 px-5 md:px-8 lg:flex-row lg:items-center lg:gap-22 lg:px-10 xl:px-20">
         <div className="relative lg:pl-10">
           {/* Header */}
           <div className="sticky top-0 z-20 flex flex-col pt-6 pb-6 lg:w-147 lg:pt-19">
-            <p className="pb-2 text-[48px] leading-[106%] font-semibold tracking-[0%]">
+            <p className="pb-2 text-[32px] leading-[106%] font-semibold tracking-[0%] md:text-[48px]">
               Everything you'd end up <HighlightText>already done.</HighlightText>
             </p>
           </div>

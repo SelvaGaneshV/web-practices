@@ -8,7 +8,7 @@ export const CoustomerBand = () => {
   return (
     <section className="relative isolate z-20 overflow-visible">
       <SectionContainer>
-        <div className="h-34">
+        <div className="h-24 md:h-34">
           <BorderedCard>
             <div className="relative flex h-full max-w-275 items-center justify-center overflow-hidden">
               <div
@@ -22,7 +22,7 @@ export const CoustomerBand = () => {
               />
 
               <div
-                className="flex w-max items-center gap-8"
+                className="flex h-8 w-max items-center gap-8 md:h-10"
                 style={{ animation: "marquee 20s linear infinite", willChange: "transform" }}
               >
                 {logos.map((logo, i) => (
@@ -34,7 +34,7 @@ export const CoustomerBand = () => {
                     height={40}
                     loading="lazy"
                     decoding="async"
-                    className="h-10 object-contain px-3 grayscale"
+                    className="h-full object-contain px-3 grayscale"
                   />
                 ))}
               </div>

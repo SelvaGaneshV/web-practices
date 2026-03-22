@@ -34,7 +34,7 @@ export const BorderedCard: FC<BorderedCardProps> = ({
   className,
   leftSpacerWidth = "w-25",
   rightSpacerWidth = "w-30",
-  lineWidth = "w-0 lg:w-328",
+  lineWidth = "w-[calc(100%+3%)]",
   showCircles = true,
 }) => (
   <div className={cn("relative z-40 flex h-full items-center justify-center", className)}>

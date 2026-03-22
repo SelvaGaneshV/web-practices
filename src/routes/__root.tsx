@@ -47,7 +47,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="font-satoshi">
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
         <Scripts />
       </body>

@@ -1,4 +1,6 @@
-export const CometChatLogo = () => {
+import type { FC, SVGProps } from "react";
+
+export const CometChatLogo: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       width="129"
@@ -6,6 +8,7 @@ export const CometChatLogo = () => {
       viewBox="0 0 129 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         fillRule="evenodd"
