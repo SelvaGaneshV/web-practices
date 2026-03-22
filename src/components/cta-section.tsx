@@ -1,5 +1,5 @@
 import { CometChatSquareLogo } from "~/assets/comet-chat-square-logo";
-import ellipse from "~/assets/eclipse.png?url";
+import ctaGlow from "~/assets/cta-glow.png?url";
 import { Button } from "./ui/button";
 import { SectionContainer } from "./ui/section-container";
 
@@ -7,7 +7,7 @@ export const CtaSection = () => {
   return (
     <section className="relative overflow-hidden content-auto">
       <img
-        src={ellipse}
+        src={ctaGlow}
         alt=""
         width={1434}
         height={1515}

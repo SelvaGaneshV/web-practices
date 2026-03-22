@@ -1,20 +1,20 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import ai from "~/assets/AI - Build Inside CometChat.png?url";
-import byob from "~/assets/Ai - BYOB.png?url";
+import buildInsideCometchat from "~/assets/build-inside-cometchat.png?url";
+import buildByob from "~/assets/build-byob.png?url";
 import { Atom } from "~/assets/atom";
-import Banner from "~/assets/Banner images.png?url";
-import endeavor from "~/assets/endeavor.png?url";
-import feature02 from "~/assets/feature-02.png?url";
-import feature03 from "~/assets/feature-03.png?url";
-import feature04 from "~/assets/feature-04.png?url";
-import haleon from "~/assets/haleon-seeklogo.com.png?url";
-import kahoot from "~/assets/kahoot-seeklogo.com.png?url";
-import section3 from "~/assets/section-3.png?url";
+import heroBanner from "~/assets/hero-banner.png?url";
+import featureChatUi from "~/assets/feature-chat-ui.png?url";
+import featureInsights from "~/assets/feature-insights.png?url";
+import featureNotifications from "~/assets/feature-notifications.png?url";
+import logoEndeavor from "~/assets/logo-endeavor.png?url";
+import logoHaleon from "~/assets/logo-haleon.png?url";
+import logoKahoot from "~/assets/logo-kahoot.png?url";
+import logoShaadi from "~/assets/logo-shaadi.png?url";
+import platformSectionImage from "~/assets/platform-section.png?url";
 import { Setting } from "~/assets/setting";
-import shaadi from "~/assets/shaadi-seeklogo.com.png?url";
 import { Stars03 } from "~/assets/star-03";
 import { Stars05 } from "~/assets/star-05";
-import { Stars02 } from "~/assets/stars-02";
+import { Stars02 } from "~/assets/star-02";
 import {
   type BuildCardData,
   type ChatIntegrationCardData,
@@ -25,7 +25,7 @@ import {
   type SocialLink,
 } from "./types";
 
-export const routes = ["Platform", "Solutions", "Developers", "Resources", "Pricing"];
+export const navLinks = ["Platform", "Solutions", "Developers", "Resources", "Pricing"];
 
 export const heroData: HeroData = {
   badge: "Full Stack AI Agent Platform",
@@ -42,15 +42,15 @@ export const heroData: HeroData = {
     { label: "Schedule a Demo", href: "#", variant: "secondary" },
     { label: "Try the Agent Builder", href: "#", variant: "primary" },
   ],
-  image: Banner,
+  image: heroBanner,
   imageAlt: "CometChat banner",
 };
 
-export const customerLogo = [
-  { src: haleon, alt: "Haleon" },
-  { src: kahoot, alt: "Kahoot!" },
-  { src: endeavor, alt: "Endeavor" },
-  { src: shaadi, alt: "Shaadi.com" },
+export const customerLogos = [
+  { src: logoHaleon, alt: "Haleon" },
+  { src: logoKahoot, alt: "Kahoot!" },
+  { src: logoEndeavor, alt: "Endeavor" },
+  { src: logoShaadi, alt: "Shaadi.com" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -66,7 +66,7 @@ export const platformSectionData: PlatformSectionData = {
     { text: "Everything your agent needs to go from prototype to product - fixed.", highlight: "" },
   ],
   description: "Modular when you want control. All-in-one when you just need to launch.",
-  image: section3,
+  image: platformSectionImage,
   imageAlt: "CometChat agent",
 };
 
@@ -98,7 +98,7 @@ export const featureBlocks: FeatureBlockData[] = [
     ],
     footnote:
       "It's not just a pretty shell. It's UX that teaches trust, guides behavior, and makes your agent feel alive.",
-    image: feature02,
+    image: featureChatUi,
     imageAlt: "Production-ready chat UI",
   },
   {
@@ -117,7 +117,7 @@ export const featureBlocks: FeatureBlockData[] = [
     ],
     footnote:
       "Notifications aren't a growth hack. They're UX glue. And we built them so you wouldn't have to.",
-    image: feature04,
+    image: featureNotifications,
     imageAlt: "Multichannel notifications engine",
   },
   {
@@ -136,7 +136,7 @@ export const featureBlocks: FeatureBlockData[] = [
       "Exportable, filterable, and privacy-respectful",
     ],
     footnote: "You can't improve what you can't see. With us, you never ship blind.",
-    image: feature03,
+    image: featureInsights,
     imageAlt: "Insights dashboard",
   },
 ];
@@ -156,7 +156,7 @@ export const buildCards: BuildCardData[] = [
       "Plug into CometChat's UI, mod, notifications, and insights",
       "Modular, protocol-compatible, and fast to implement",
     ],
-    image: byob,
+    image: buildByob,
     imageAlt: "BYOB - Bring Your Own Brain",
   },
   {
@@ -167,7 +167,7 @@ export const buildCards: BuildCardData[] = [
       "Design prompt logic, memory, retries, tool use",
       "Simulate and ship - all from a single canvas",
     ],
-    image: ai,
+    image: buildInsideCometchat,
     imageAlt: "Build Inside CometChat",
   },
 ];
@@ -227,7 +227,7 @@ export const footerColumns: Column[] = [
         links: [
           { label: "Chat & Messaging", href: "#" },
           { label: "Voice & Video Calls", href: "#" },
-          { label: "Notifocations", href: "#" },
+          { label: "Notifications", href: "#" },
           { label: "Analytics & Insights", href: "#" },
           { label: "Multi-Tenant Chat", href: "#" },
         ],

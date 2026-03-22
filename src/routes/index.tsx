@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BuildSection } from "~/components/build-section";
-import { ChatIntergrationSection } from "~/components/chat-intergration-section";
+import { ChatIntegrationSection } from "~/components/chat-integration-section";
 import { CoreFeatures } from "~/components/core-features";
 import { CtaSection } from "~/components/cta-section";
-import { CoustomerBand } from "~/components/customer-band";
+import { CustomerBand } from "~/components/customer-band";
 import { Hero } from "~/components/hero";
 import { PlatformSection } from "~/components/platform-section";
 
@@ -15,11 +15,11 @@ function RouteComponent() {
   return (
     <main className="flex flex-col gap-22">
       <Hero />
-      <CoustomerBand />
+      <CustomerBand />
       <PlatformSection />
       <CoreFeatures />
       <BuildSection />
-      <ChatIntergrationSection />
+      <ChatIntegrationSection />
       <CtaSection />
     </main>
   );

@@ -1,6 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
-import Banner from "~/assets/Banner images.png?url";
+import heroBanner from "~/assets/hero-banner.png?url";
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
 
@@ -38,7 +38,6 @@ export const Route = createRootRoute({
       { property: "og:image:alt", content: "CometChat - Full Stack AI Agent Platform" },
       { property: "og:locale", content: "en_US" },
 
-      // Twitter Card — controls how links appear when shared on Twitter/X
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@CometChat" },
       {
@@ -55,21 +54,16 @@ export const Route = createRootRoute({
         content: "https://web-practices.vercel.app/og-image.png",
       },
 
-      // Additional SEO meta tags
       { name: "theme-color", content: "#0B0A14" },
       { name: "robots", content: "index, follow" },
       { name: "author", content: "CometChat" },
     ],
     links: [
-      // Canonical URL — tells search engines this is the primary URL to index, preventing duplicate content issues
       { rel: "canonical", href: "https://web-practices.vercel.app" },
-      // Favicon links for various devices
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "icon", href: "/logo192.png", type: "image/png", sizes: "192x192" },
       { rel: "apple-touch-icon", href: "/logo192.png" },
-      // Web App Manifest for PWA support
       { rel: "manifest", href: "/manifest.json" },
-      // Font preload — loads the font early to prevent layout shifts (improves CLS score)
       {
         rel: "preload",
         href: "/fonts/Satoshi-Variable.woff2",
@@ -77,7 +71,7 @@ export const Route = createRootRoute({
         type: "font/woff2",
         crossOrigin: "anonymous",
       },
-      { rel: "preload", href: Banner, as: "image" },
+      { rel: "preload", href: heroBanner, as: "image" },
       { rel: "stylesheet", href: appCss },
     ],
     scripts: [

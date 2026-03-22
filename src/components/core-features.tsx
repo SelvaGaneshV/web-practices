@@ -1,5 +1,5 @@
 import { Stars04 } from "~/assets/star-04";
-import feature01 from "~/assets/feature-01.png?url";
+import featureCoreIntro from "~/assets/feature-core-intro.png?url";
 import { GradientDivider } from "./ui/gradient-divider";
 import { FeatureBlock } from "./ui/feature-block";
 import { SectionContainer } from "./ui/section-container";
@@ -43,7 +43,7 @@ export const CoreFeatures = () => {
               </div>
               <div className="flex w-full items-center justify-center lg:w-1/2">
                 <img
-                  src={feature01}
+                  src={featureCoreIntro}
                   alt="Everything you'd end up already done."
                   width={640}
                   height={640}

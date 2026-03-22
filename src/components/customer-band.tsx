@@ -1,14 +1,14 @@
-import { customerLogo } from "~/utils/constants";
+import { customerLogos } from "~/utils/constants";
 import { SectionContainer } from "./ui/section-container";
 import { BorderedCard } from "./ui/bordered-card";
 
-export const CoustomerBand = () => {
+export const CustomerBand = () => {
   const logos = [
-    ...customerLogo,
-    ...customerLogo,
-    ...customerLogo,
-    ...customerLogo,
-    ...customerLogo,
+    ...customerLogos,
+    ...customerLogos,
+    ...customerLogos,
+    ...customerLogos,
+    ...customerLogos,
   ];
 
   return (

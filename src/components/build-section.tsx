@@ -1,5 +1,5 @@
-import tech from "~/assets/tech.png?url";
-import techm from "~/assets/techm.png?url";
+import techIntegrations from "~/assets/tech-integrations.png?url";
+import techIntegrationsMobile from "~/assets/tech-integrations-mobile.png?url";
 import { SectionContainer } from "./ui/section-container";
 import { BulletItem } from "./ui/feature-block";
 import { buildCards } from "~/utils/constants";
@@ -46,7 +46,7 @@ export const BuildSection = () => {
         <img
           width={1090}
           height={294}
-          src={tech}
+          src={techIntegrations}
           alt="Technology integrations supported by CometChat"
           loading="lazy"
           decoding="async"
@@ -55,7 +55,7 @@ export const BuildSection = () => {
         <img
           width={349}
           height={167}
-          src={techm}
+          src={techIntegrationsMobile}
           alt="Technology integrations supported by CometChat"
           loading="lazy"
           decoding="async"

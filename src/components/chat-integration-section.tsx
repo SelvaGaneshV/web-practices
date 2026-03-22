@@ -23,9 +23,9 @@ const borderMap = [
   "border-r border-primary/10",
 ];
 const borderMapMobile = [
-  "border-l broder-r border-primary/10",
+  "border-l border-r border-primary/10",
   "border-t border-b border-primary/10",
-  "border-r broder-l  border-primary/10",
+  "border-r border-l border-primary/10",
 ];
 
 const StaticCard = ({
@@ -120,7 +120,7 @@ const HoverCard = ({
   );
 };
 
-export const ChatIntergrationSection = () => {
+export const ChatIntegrationSection = () => {
   return (
     <section className="content-auto">
       <SectionContainer>

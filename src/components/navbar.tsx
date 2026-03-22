@@ -1,4 +1,4 @@
-import { routes } from "~/utils/constants";
+import { navLinks } from "~/utils/constants";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "~/utils/utils";
 import { CometChatLogo } from "~/assets/comet-chat-logo";
@@ -12,13 +12,13 @@ const Navbar = () => {
           <CometChatLogo className="h-3.5 w-22.5 md:h-5 md:w-32.25" />
         </a>
         <div className="hidden gap-6 md:flex lg:gap-10 xl:gap-12">
-          {routes.map((route) => (
+          {navLinks.map((link) => (
             <a
-              key={route}
+              key={link}
               className="text-[14px] leading-[140%] font-semibold tracking-[0.02em] hover:text-accent-primary"
               href={`#`}
             >
-              {route}
+              {link}
             </a>
           ))}
         </div>
