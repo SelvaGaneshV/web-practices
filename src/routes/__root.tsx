@@ -3,7 +3,7 @@ import appCss from "../styles.css?url";
 import heroBanner from "~/assets/images/hero-banner.png?url";
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
-
+import { Analytics } from "@vercel/analytics/react";
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -30,12 +30,16 @@ export const Route = createRootRoute({
       { property: "og:url", content: "https://web-practices.vercel.app" },
       {
         property: "og:image",
-        content: "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
+        content:
+          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
       },
       { property: "og:image:type", content: "image/png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "CometChat - Full Stack AI Agent Platform" },
+      {
+        property: "og:image:alt",
+        content: "CometChat - Full Stack AI Agent Platform",
+      },
 
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -51,7 +55,8 @@ export const Route = createRootRoute({
       },
       {
         name: "twitter:image",
-        content: "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
+        content:
+          "https://a.storyblok.com/f/231922/1200x630/d639d0748b/open-graph-image.png",
       },
 
       { name: "theme-color", content: "#0B0A14" },
@@ -61,7 +66,12 @@ export const Route = createRootRoute({
     links: [
       { rel: "canonical", href: "https://web-practices.vercel.app" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "icon", href: "/logo192.png", type: "image/png", sizes: "192x192" },
+      {
+        rel: "icon",
+        href: "/logo192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
       { rel: "apple-touch-icon", href: "/logo192.png" },
       { rel: "manifest", href: "/manifest.json" },
       {
@@ -107,7 +117,8 @@ export const Route = createRootRoute({
               url: "https://web-practices.vercel.app",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://web-practices.vercel.app/search?q={search_term_string}",
+                target:
+                  "https://web-practices.vercel.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             },
@@ -140,6 +151,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-satoshi">
+        <Analytics mode="production" />
         <Navbar />
         {children}
         <Footer />
