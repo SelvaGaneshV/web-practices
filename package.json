@@ -22,7 +22,6 @@
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.2",
     "@tailwindcss/vite": "^4.2.2",
-    "@tanstack/router-plugin": "^1.167.8",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

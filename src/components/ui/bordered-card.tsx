@@ -1,7 +1,7 @@
 import { cn } from "~/utils/utils";
 import { type FC, type ReactNode } from "react";
 
-export const gradientLine =
+const gradientLine =
   "linear-gradient(90deg, rgba(250,250,255,0) 0%, rgba(250,250,255,1) 5%, rgba(250,250,255,1) 95%, rgba(250,250,255,0) 100%)";
 
 const CornerCircle = ({

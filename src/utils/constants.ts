@@ -145,12 +145,6 @@ export const featureBlocks: FeatureBlockData[] = [
   },
 ];
 
-export const buildSectionData = {
-  heading: "Plug In your logic. \nOr build it here.",
-  subheading: "Two paths. Same full-stack experience.",
-  image: "tech",
-};
-
 export const buildCards: BuildCardData[] = [
   {
     icon: Stars03,
